@@ -1,36 +1,46 @@
-let bPolski = true;
-let bAngielski = false;
+const teksty = {
+	pl: {
+		powitalny: "Witaj w DriveMarket – najlepszym sklepie online!",
+		usluga1: "Usługa 1",
+		usluga2: "Usługa 2",
+		usluga3: "Usługa 3",
+		zobaczWiecej: "Zobacz więcej",
+		copyright: "&copy; 2024 DriveMarket. Wszystkie prawa zastrzeżone."
+	},
+	en: {
+		powitalny: "Welcome to DriveMarket - the best online store!",
+		usluga1: "Service 1",
+		usluga2: "Service 2",
+		usluga3: "Service 3",
+		zobaczWiecej: "See more",
+		copyright: "&copy; 2024 DriveMarket. All rights reserved."
+	}
+};
+
+const jezyki = ['pl', 'en'];
+
+let jezykIndex = 0;
 
 function zmienjezyk() {
-	if (bPolski) {
-		bPolski = false;
-		bAngielski = true;
+	jezykIndex = (jezykIndex + 1) % jezyki.length;
 
-		document.getElementById("site-name").innerText = "Strona Test 1";
-		document.getElementById("opistext1").innerText = "Opis 1";
-		document.getElementById("opistext2").innerText = "Opis 2";
-		document.getElementById("opistext3").innerText = "Opis 3";
-		document.getElementById("offers-text").innerText = "Oferty";
-		document.getElementById("button-wlacz-darkmode").innerText = "Włącz / Wylacz dark mode";
-		document.getElementById("button-wlacz-angielski").innerText = "Switch to English";
-		document.getElementById("option3").innerText = "Opcja 3";
-	}
+	const aktualnyJezyk = jezyki[jezykIndex];
 
-	if (bAngielski) {
-		bPolski = true;
-		bAngielski = false;
-
-		document.getElementById("site-name").innerText = "Test Site 1";
-		document.getElementById("opistext1").innerText = "Description 1";
-		document.getElementById("opistext2").innerText = "Description 2";
-		document.getElementById("opistext3").innerText = "Description 3";
-		document.getElementById("offers-text").innerText = "Offers";
-		document.getElementById("button-wlacz-darkmode").innerText = "Enable / Disable Dark Mode";
-		document.getElementById("button-wlacz-angielski").innerText = "Zamien na Polski";
-		document.getElementById("option3").innerText = "Option 3";
-	}
+	document.getElementById("string-powitalny").innerText = teksty[aktualnyJezyk].powitalny;
+	document.getElementById("string-usluga1").innerText = teksty[aktualnyJezyk].usluga1;
+	document.getElementById("string-usluga2").innerText = teksty[aktualnyJezyk].usluga2;
+	document.getElementById("string-usluga3").innerText = teksty[aktualnyJezyk].usluga3;
+	document.getElementById("string-zobacz-wiecej").innerText = teksty[aktualnyJezyk].zobaczWiecej;
+	document.getElementById("string-copyright").innerHTML = teksty[aktualnyJezyk].copyright;
 }
 
 window.onload = function() {
-	zmienjezyk();
+	const aktualnyJezyk = jezyki[jezykIndex];
+
+	document.getElementById("string-powitalny").innerText = teksty[aktualnyJezyk].powitalny;
+	document.getElementById("string-usluga1").innerText = teksty[aktualnyJezyk].usluga1;
+	document.getElementById("string-usluga2").innerText = teksty[aktualnyJezyk].usluga2;
+	document.getElementById("string-usluga3").innerText = teksty[aktualnyJezyk].usluga3;
+	document.getElementById("string-zobacz-wiecej").innerText = teksty[aktualnyJezyk].zobaczWiecej;
+	document.getElementById("string-copyright").innerHTML = teksty[aktualnyJezyk].copyright;
 }
