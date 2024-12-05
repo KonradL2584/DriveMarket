@@ -25,6 +25,12 @@
 				<a href="templates/posts.html">Produkty</a>
 				<a href="#">Kontakt</a>
 			</nav>
+
+			<div class="option-buttons">
+				<button id="button-wlacz-darkmode">Wlacz / wylacz dark mode</button>
+				<button id="button-wlacz-angielski" onclick="zmienjezyk()">Wlacz / wylacz angielski</button>
+			</div>
+
 			<div class="auth-buttons">
 				<a href="login.html" class="auth-btn">Zaloguj się</a>
 				<a href="register.html" class="auth-btn">Zarejestruj się</a>
@@ -34,7 +40,7 @@
 		<!-- Hero Section -->
 		<section class="hero">
 			<div class="hero-box"></div>
-			<p class="hero-text">Witaj w DriveMarket – najlepszym sklepie online!</p>
+			<p class="hero-text" id="string-powitalny">Witaj w DriveMarket – najlepszym sklepie online!</p>
 			<a href="#" class="cta-btn">Sprawdź naszą ofertę</a>
 		</section>
 
@@ -42,24 +48,30 @@
 		<section class="services">
 			<div class="service">
 				<div class="service-box"></div>
-				<p>Usługa 1</p>
-				<button class="service-btn">Zobacz więcej</button>
+				<p id="string-usluga1">Usługa 1</p>
+				<button class="service-btn" id="string-zobacz-wiecej">Zobacz więcej</button>
 			</div>
 			<div class="service">
 				<div class="service-box"></div>
-				<p>Usługa 2</p>
-				<button class="service-btn">Zobacz więcej</button>
+				<p id="string-usluga2">Usługa 2</p>
+				<button class="service-btn" id="string-zobacz-wiecej">Zobacz więcej</button>
 			</div>
 			<div class="service">
 				<div class="service-box"></div>
-				<p>Usługa 3</p>
-				<button class="service-btn">Zobacz więcej</button>
+				<p id="string-usluga3">Usługa 3</p>
+				<button class="service-btn" id="string-zobacz-wiecej">Zobacz więcej</button>
 			</div>
 		</section>
 
 		<!-- Footer -->
 		<footer class="footer">
-			<p>&copy; 2024 DriveMarket. Wszystkie prawa zastrzeżone.</p>
+			<p id="string-copyright">&copy; 2024 DriveMarket. Wszystkie prawa zastrzeżone.</p>
 		</footer>
+
+		<!-- Musi byc na dole bo inaczej nie wykryje id uzyte w javascript -->
+		<script src="scripts/wyszukiwarka.js"></script>
+		<script src="scripts/darkmode.js"></script>
+		<script src="scripts/zmienjezyk.js"></script>
 	</body>
+
 </html>
