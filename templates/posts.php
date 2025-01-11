@@ -58,8 +58,8 @@ if (isset($_GET['sortowanie'])) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>DriveMarket - Post</title>
-	<link rel="stylesheet" href="styles/common.css">
-	<link rel="stylesheet" href="styles/posts.css">
+	<link rel="stylesheet" href="../styles/common.css">
+	<link rel="stylesheet" href="../styles/posts.css">
 </head>
 
 <body>
